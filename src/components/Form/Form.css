@@ -1,0 +1,44 @@
+.form {
+  display: flex;
+  background: rgb(20, 20, 20);
+  flex-direction: column;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.user_name {
+  color: aliceblue;
+  padding: 10px;
+}
+
+.form_email {
+  color: aliceblue;
+  padding: 10px;
+}
+
+.form_message {
+  color: rgb(21, 22, 22);
+  padding: 20px;
+}
+
+.form_name_label {
+  font-size: 20px;
+  color: #fff;
+}
+
+.form_email_label {
+  font-size: 20px;
+  color: #fff;
+}
+
+.form_message_label {
+  font-size: 20px;
+  color: #fff;
+}
+
+.form_error {
+  color: red;
+}
