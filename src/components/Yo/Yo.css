@@ -1,3 +1,6 @@
+* {
+  background: rgb(20, 20, 20);
+}
 .content_yo {
   display: flex;
   flex-direction: row;
@@ -6,6 +9,7 @@
   align-content: center;
   justify-content: flex-start;
   align-items: center;
+  background: rgb(20, 20, 20);
 }
 .image_text_yo {
   display: flex;
@@ -22,6 +26,7 @@
   color: #fff;
   letter-spacing: 2px;
   margin-left: 50px;
+  background: rgb(20, 20, 20);
 }
 
 .line_yo {

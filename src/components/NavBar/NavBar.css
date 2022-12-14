@@ -12,7 +12,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width: 80%;
+  flex-wrap: wrap;
 }
 
 .ul_navBar li {
