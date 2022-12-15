@@ -35,7 +35,7 @@ export function SwiperComponent() {
               <p className="duration">Proyecto CoderHouse</p>
             </a>
           </div>
-          <div className="item">
+          {/* <div className="item">
             <a href="#">
               <img
                 src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABQCoK53qihwVPLRxPEDX98nyYpGbxgi5cc0ZOM4iHQu7KQvtgNyaNM5PsgI0vy5g3rLPZdjGCFr1EggrCPXpL77p2H08jV0tNEmIfs_e8KUfvBJ6Ay5nM4UM1dl-58xA6t1swmautOM.webp"
@@ -65,13 +65,13 @@ export function SwiperComponent() {
               <h1 className="heading">Heading One</h1>
               <p className="duration">Duration: 10 min</p>
             </a>
-          </div>
+          </div> */}
           <a href="#section2" className="arrow__btn right-arrow">
             ›
           </a>
         </section>
 
-        <section id="section2">
+        {/* <section id="section2">
           <a href="#section1" className="arrow__btn left-arrow">
             ‹
           </a>
@@ -147,8 +147,8 @@ export function SwiperComponent() {
 
           <a href="#section1" className="arrow__btn right-arrow">
             ›
-          </a>
-        </section>
+          </a> */}
+        {/* </section> */}
       </div>
     </>
   );

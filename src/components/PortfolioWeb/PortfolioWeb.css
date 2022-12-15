@@ -1,5 +1,10 @@
 .name_landing {
   color: #e50914;
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
   letter-spacing: 3px;
   margin: 10px 10px;
   font-size: 2rem;
