@@ -12,19 +12,20 @@ export const NavBar = () => {
             <PortfolioWeb />
           </li>
           <Link to="/home">
-            <li>HOME</li>
+            <li className="li_home">Home</li>
           </Link>
 
           <Link to="/yo">
-            <li>YO</li>
+            <li className="li_home">Yo</li>
           </Link>
           <Link to="/">
-            <li>PERFIL</li>
+            <li className="li_home">Perfil</li>
           </Link>
           <Link to="/contact-form">
-            <li>CONTACTO</li>
+            <li className="li_home">Contacto</li>
           </Link>
         </ul>
+        <div className="gradient_black_navBar"></div>
       </div>
     </>
   );

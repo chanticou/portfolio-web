@@ -18,11 +18,13 @@
   text-decoration: none;
   width: 10vw;
   background-size: cover;
+  transform: translateZ(0);
+  transition: transform 0.4s ease;
 }
 
 .image_profile:hover {
-  border: 0.1em solid white;
+  transform: perspective(1000px) translateZ(5px);
+  box-shadow: 0 0 3px #fff;
+  /* border: 0.1em solid white; */
   border-radius: 4px;
-  width: 136px;
-  height: 136px;
 }

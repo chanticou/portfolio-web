@@ -54,30 +54,33 @@ export const Form = () => {
     <>
       <NavBar />
       <form className="form" ref={form} onSubmit={sendEmail}>
-        <label className="form_name_label">Name</label>
+        <label className="label_form">Name</label>
         <input
           onChange={(e) => handleChange(e)}
           type="text"
           name="user_name"
+          placeholder="Name..."
           value={input.user_name}
-          className="form_name"
+          className="input_form"
         />
 
-        <label className="form_email_label">Email</label>
+        <label className="label_form">Email</label>
         <input
           onChange={(e) => handleChange(e)}
           type="email"
           name="user_email"
+          placeholder="Email..."
           value={input.user_email}
-          className="form_email"
+          className="input_form"
         />
 
-        <label className="form_message_label">Message</label>
+        <label className="label_form">Message</label>
         <textarea
           onChange={(e) => handleChange(e)}
           name="message"
           value={input.message}
           className="form_message"
+          placeholder="Message..."
         />
         <span
           hidden={

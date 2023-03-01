@@ -1,8 +1,12 @@
 .form {
   display: flex;
-  background: rgb(20, 20, 20);
+  background: rgb(17 16 16);
   flex-direction: column;
-  width: 100%;
+  /* width: 100%; */
+  margin: auto;
+  width: 500px;
+  border-radius: 20px;
+  padding: 50px;
   align-content: center;
   justify-content: center;
   align-items: center;
@@ -22,23 +26,30 @@
 .form_message {
   color: rgb(21, 22, 22);
   padding: 20px;
+  background-color: #fff;
 }
 
-.form_name_label {
-  font-size: 20px;
+.label_form {
   color: #fff;
-}
-
-.form_email_label {
-  font-size: 20px;
-  color: #fff;
-}
-
-.form_message_label {
-  font-size: 20px;
-  color: #fff;
+  font-size: 1.2rem;
 }
 
 .form_error {
   color: red;
+}
+
+.input_form {
+  padding: 10px 18px;
+  background-color: #fff;
+}
+
+.form_submit_button {
+  background-color: #fff;
+  padding: 10px 30px;
+  border-color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.form_submit_button:hover {
+  opacity: 0.8;
 }
