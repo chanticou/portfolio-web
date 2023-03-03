@@ -14,6 +14,12 @@ export const Form = () => {
     message: "",
   });
 
+  const [placeHolder, setPlaceHolder] = useState({
+    name: "Name",
+    email: "Email",
+    message: "Message",
+  });
+
   const [errors, setErrors] = useState(true);
 
   const handleChange = (e) => {
@@ -21,6 +27,42 @@ export const Form = () => {
       ...input,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const handleClick = (e) => {
+    if (e.target.name === "user_name") {
+      setPlaceHolder((prevState) => ({
+        ...prevState,
+        name: "",
+        email: "Email",
+        message: "Message",
+      }));
+    }
+    if (e.target.name === "user_email") {
+      setPlaceHolder((prevState) => ({
+        ...prevState,
+        name: "Name",
+        email: "",
+        message: "Message",
+      }));
+    }
+    if (e.target.name === "message") {
+      setPlaceHolder((prevState) => ({
+        ...prevState,
+        name: "Name",
+        email: "Email",
+        message: "",
+      }));
+    }
+  };
+
+  const handleMouseOut = () => {
+    setPlaceHolder((prevState) => ({
+      ...prevState,
+      name: "Name",
+      email: "Email",
+      message: "Message",
+    }));
   };
 
   const sendEmail = (e) => {
@@ -53,47 +95,65 @@ export const Form = () => {
   return (
     <>
       <NavBar />
-      <form className="form" ref={form} onSubmit={sendEmail}>
-        <label className="label_form">Name</label>
-        <input
-          onChange={(e) => handleChange(e)}
-          type="text"
-          name="user_name"
-          placeholder="Name..."
-          value={input.user_name}
-          className="input_form"
-        />
+      <div>
+        <div className="content_contact-me">
+          <span className="contact-me">CONTACTAME</span>
+        </div>
+        <form className="form" onSubmit={sendEmail}>
+          <div className="content_name_email">
+            <input
+              onMouseOut={() => handleMouseOut()}
+              onMouseOver={(e) => handleClick(e)}
+              onChange={(e) => handleChange(e)}
+              type="text"
+              name="user_name"
+              placeholder={placeHolder.name}
+              value={input.user_name}
+              className="input_form"
+            />
 
-        <label className="label_form">Email</label>
-        <input
-          onChange={(e) => handleChange(e)}
-          type="email"
-          name="user_email"
-          placeholder="Email..."
-          value={input.user_email}
-          className="input_form"
-        />
+            <input
+              onMouseOut={() => handleMouseOut()}
+              onMouseOver={(e) => handleClick(e)}
+              onChange={(e) => handleChange(e)}
+              type="email"
+              name="user_email"
+              placeholder={placeHolder.email}
+              value={input.user_email}
+              className="input_form"
+            />
+          </div>
 
-        <label className="label_form">Message</label>
-        <textarea
-          onChange={(e) => handleChange(e)}
-          name="message"
-          value={input.message}
-          className="form_message"
-          placeholder="Message..."
-        />
-        <span
-          hidden={
-            input.user_name && input.user_email && input.message
-              ? !errors
-              : errors
-          }
-        >
-          <h3 className="form_error">Falta completar datos</h3>
-        </span>
+          {/* <div className="content_text"> */}
+          <textarea
+            onMouseOut={() => handleMouseOut()}
+            onMouseOver={(e) => handleClick(e)}
+            onChange={(e) => handleChange(e)}
+            name="message"
+            value={input.message}
+            className="form_message"
+            placeholder={placeHolder.message}
+          />
+          {/* </div> */}
+          {/* <label className="label_form">Name</label> */}
 
-        <input className="form_submit_button" type="submit" value="Send" />
-      </form>
+          {/* <label className="label_form">Email</label> */}
+
+          {/* <label className="label_form">Message</label> */}
+
+          <span
+            hidden={
+              input.user_name && input.user_email && input.message
+                ? !errors
+                : errors
+            }
+          >
+            <h3 className="form_error">Falta completar datos</h3>
+          </span>
+
+          <input className="form_submit_button" type="submit" value="Enviar" />
+        </form>
+      </div>
     </>
   );
 };
