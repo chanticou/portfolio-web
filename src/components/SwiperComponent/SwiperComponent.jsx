@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 
@@ -15,17 +15,11 @@ import "./SwiperComponent.css";
 import "./SwiperComponent.css";
 
 export function SwiperComponent() {
-  const ScrollLink = Scroll.ScrollLink;
-  const handleCLick = () => {
-    <ScrollLink
-      to="example-destination"
-      spy={true}
-      smooth={true}
-      duration={500}
-      className="example-destination"
-      activeClass="example-destination active"
-    ></ScrollLink>;
-    console.log("clock");
+  const [scrollTop, setScrollTop] = useState(0);
+  const ref = useRef(null);
+
+  const scroll = (scrollOffset) => {
+    ref.current.scrollLeft += scrollOffset;
   };
   const prueba = () => {};
   return (
@@ -36,14 +30,16 @@ export function SwiperComponent() {
           <div className="carrousel_content">
             <div className="content_rows">
               <div
-                onClick={(e) => handleCLick(e, "left")}
+                onClick={() => scroll(-20)}
+                // onClick={(e) => handleCLick(e, "left")}
                 role={"button"}
                 className="left_arrow"
               >
                 <FaAngleLeft className="left" />
               </div>
               <div
-                onClick={(e) => handleCLick(e, "right")}
+                // onClick={(e) => handleCLick(e, "right")}
+                onClick={() => scroll(-20)}
                 role={"button"}
                 className="right_arrow"
               >
@@ -92,13 +88,7 @@ export function SwiperComponent() {
                   src={bentoLogo}
                   alt="Describe Image"
                 ></img>
-                <div
-                  id="example-destination"
-                  className="example-destination active"
-                  name="example-destination"
-                >
-                  // wrap your content in the Element from react-scroll
-                </div>
+                <div ref={ref}></div>
               </div>
             </div>
           </div>

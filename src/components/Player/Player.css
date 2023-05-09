@@ -14,10 +14,12 @@
   background-color: #fff;
   cursor: pointer;
   color: black;
+  top: 127px;
   font-weight: bold;
   font-size: 1rem;
   border-color: #fff;
   border-radius: 5px;
+  position: absolute;
 }
 .button_music:hover {
   opacity: 0.8;

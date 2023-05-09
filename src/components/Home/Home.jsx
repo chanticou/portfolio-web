@@ -11,12 +11,16 @@ export const Home = () => {
       <div className="content_home">
         <NavBar />
         <div className="content_space_girl_image">
-          <div>
+          <div className="content_image">
             <img className="space_girl_image" src={youreName} alt=""></img>
+          </div>
 
-            <p className="home_hi">¡Hola! Soy</p>
-            <p className="home_name">Chantal Coutenceau</p>
-            <p className="home_fullstack">Desarrolladora Full-stack</p>
+          <div className="content_data_image">
+            <p className="p">¡Hola! Soy</p>
+            <span className="name">Chantal</span>
+            <span className="lastName">Coutenceau.</span>
+
+            <p className="p">Desarrolladora Full-stack</p>
             <Player url={music} />
           </div>
           <div className="gradient_image"></div>
